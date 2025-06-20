@@ -1,0 +1,20 @@
+{
+  "name": "design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "nodemon bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@grammyjs/conversations": "2.1.0",
+    "conversations": "2.0.2",
+    "dotenv": "16.5.0",
+    "grammy": "1.36.3",
+    "nodemon": "3.1.10"
+  }
+}
