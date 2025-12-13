@@ -1,3 +1,6 @@
+import { user } from "./customer/database/user";
+import { ClientBotContext } from "./customer/types/clientContext";
+
 require('dotenv').config();
 const { Bot, session, keyboard, } = require('grammy');
 const { conversations, createConversation } = require('@grammyjs/conversations');
@@ -30,7 +33,10 @@ bot.api.setMyCommands([
 ]);
 
 bot.command('start', async (ctx) => {
-    await ctx.conversation.enter('registration'); 
+    const userId = String(ctx.from!.id);
+    if(!user[userId]) {
+        await ctx.conversation.enter('registration'); 
+    } 
 });
 
 
